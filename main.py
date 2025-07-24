@@ -17,7 +17,7 @@ def remove_links_from_page(page):
             annot = annot_ref.get_object()
             if isinstance(annot, DictionaryObject):
                 if '/Subtype' in annot and annot['/Subtype'] == '/Link':
-                    continue  
+                    continue 
                 else:
                     filtered_annotations.append(annot_ref)
             else:
@@ -120,9 +120,7 @@ def main():
         usage="%(prog)s input output [options]\n       %(prog)s --dir input_directory output_directory [options]"
     )
     
-    group = parser.add_mutually_exclusive_group(required=True)
-    
-    group.add_argument('--dir', action='store_true',
+    parser.add_argument('--dir', action='store_true',
                       help='Process all PDFs in a directory')
     
     parser.add_argument('input', help='Input PDF file or directory path')
