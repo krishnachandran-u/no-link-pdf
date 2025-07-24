@@ -3,7 +3,7 @@
 Before using the tool, create a virtual environment and install the required packages:
 
 ```bash
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
 pip install -r requirements.txt
 ```
@@ -15,8 +15,8 @@ A simple tool to remove all links from PDF files.
 ## Usage
 
 ```bash
-python main.py input output [options]
-python main.py --dir input_directory output_directory [options]
+python3 main.py input output [options]
+python3 main.py --dir input_directory output_directory [options]
 ```
 
 ### Positional Arguments
@@ -43,11 +43,11 @@ python main.py --dir input_directory output_directory [options]
 Remove links from a single PDF:
 
 ```bash
-python main.py input.pdf output.pdf
+python3 main.py input.pdf output.pdf
 ```
 
 Remove links from all PDFs in a directory:
 
 ```bash
-python main.py --dir input_dir output_dir
+python3 main.py --dir input_dir output_dir
 ```
